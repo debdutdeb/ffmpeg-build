@@ -58,6 +58,7 @@ jobs:
   package-macos:
     runs-on: macos-latest
     strategy:
+      fail-fast: false
       matrix:
         # https://developer.apple.com/documentation/apple-silicon/building-a-universal-macos-binary#Update-the-Architecture-List-of-Custom-Makefiles
         target:
