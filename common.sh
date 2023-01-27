@@ -5,6 +5,7 @@ FFMPEG_TARBALL=ffmpeg-$FFMPEG_VERSION.tar.bz2
 FFMPEG_TARBALL_URL=http://ffmpeg.org/releases/$FFMPEG_TARBALL
 
 do_svn_checkout() {
+
   repo_url="$1"
   to_dir="$2"
   desired_revision=""
