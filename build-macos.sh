@@ -47,8 +47,8 @@ FFMPEG_CONFIGURE_FLAGS+=(
     --enable-cross-compile
     --target-os=darwin
     --arch=$ARCH
-    --extra-ldflags="-target $TARGET"
-    --extra-cflags="-target $TARGET"
+    --extra-ldflags="-target arm64-apple-darwin"
+    --extra-cflags="-target arm64-apple-darwin"
     --enable-runtime-cpudetect
 )
 
@@ -62,7 +62,7 @@ FFMPEG_CONFIGURE_FLAGS+=(--prefix=$PREFIX)
 do_svn_checkout https://svn.code.sf.net/p/lame/svn/trunk/lame lame_svn
   cd lame_svn
     echo "Compiling lame: prefix $PREFIX"
-    ./configure --enable-nasm --disable-decoder --prefix=$PREFIX --enable-static --disable-shared --host=$TARGET
+    ./configure --enable-nasm --disable-decoder --prefix=$PREFIX --enable-static --disable-shared --host=aarch64-apple-darwin
     make -j8
     make install
   cd ..
