@@ -46,7 +46,7 @@ FFMPEG_CONFIGURE_FLAGS+=(
     --prefix=$BASE_DIR/$OUTPUT_DIR
     --enable-cross-compile
     --target-os=darwin
-    --arch=$ARCH
+    --arch=arm64
     --extra-ldflags="-target arm64-apple-darwin"
     --extra-cflags="-target arm64-apple-darwin"
     --enable-runtime-cpudetect
